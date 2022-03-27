@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  APIURL: 'http://127.0.0.1:8000/users',
+  APIAUTH: 'http://127.0.0.1:8000/api/auth/'
 };

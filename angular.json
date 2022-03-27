@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "prj1",
   "projects": {
-    "ums": {
+    "prj1": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -27,9 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+             "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" 
+            ]
           },
           "configurations": {
             "production": {
@@ -68,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ums:build:production"
+              "browserTarget": "prj1:build:production"
             },
             "development": {
-              "browserTarget": "ums:build:development"
+              "browserTarget": "prj1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ums:build"
+            "browserTarget": "prj1:build"
           }
         },
         "test": {
